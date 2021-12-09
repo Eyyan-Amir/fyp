@@ -1,10 +1,9 @@
 import React ,{useEffect} from "react";
-// import * as React  from 'react';
 import logo from './logo.svg';
 import './App.css';
-import "./scss/style.scss";
+import "./assets/scss/styles.scss";
+// import "./scss/style.scss";
 import Main from './components/Main'
-import Uikit from "./components/Uikit";
 
 
 
@@ -14,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p className=''>
+        <p className='para'>
           Edit <code>src/App.js</code> and save to reloads.
         </p>
         <a
@@ -26,7 +25,6 @@ function App() {
           Learn React
         </a>
         <Main />
-        {/* <Uikit /> */}
       </header>
     </div>
     </>

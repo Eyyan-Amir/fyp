@@ -1,0 +1,43 @@
+header {
+    padding-top: rem(16px);
+    padding-bottom: rem(16px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    &.sticky {
+        background: rgba(0,0,0,.3);
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            max-width: 120px;
+            background: rgb(255 255 255 / 70%);
+            padding: 5px;
+            &:hover {
+                opacity: .75;
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            list-style: unset;
+            padding: 0;
+            li {
+                &:not(:last-child) {
+                    margin-right: rem(25px);
+                }
+                &::marker {
+                    content: none;
+                }
+                a {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

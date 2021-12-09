@@ -1,0 +1,38 @@
+html {
+	font-size: 100%;
+	overflow-x: hidden;
+	
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+	font-size: rem(16px);
+	font-family: $primary-font;
+	color: var(--default);
+	line-height: 1;
+	margin: 0;
+	overflow-x: hidden;
+	background: var(--bg);
+	width: 100%;
+	
+	&.no-scroll {
+		overflow: hidden;
+		position: fixed;
+	}
+	&.modal-open {
+		position: fixed;
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 80%;
+    }
+}
+
