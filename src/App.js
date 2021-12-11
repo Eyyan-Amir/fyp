@@ -1,8 +1,7 @@
-import React ,{useEffect} from "react";
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 import "./assets/scss/styles.scss";
-// import "./scss/style.scss";
+import Footer from "./components/layout/Footer";
+import Header from "./components/layout/Header";
 import Main from './components/Main'
 
 
@@ -10,23 +9,11 @@ import Main from './components/Main'
 function App() {
   return (
     <>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className=''>
-          Edit <code>src/App.js</code> and save to reloads.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Main />
-      </header>
-    </div>
+		<div className="App">
+        	<Header />
+          		<Main />
+        	<Footer />
+    	</div>
     </>
   );
 }
