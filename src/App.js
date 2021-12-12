@@ -9,6 +9,7 @@ function App() {
 		<>
 			<div className='App'>
 				<Header />
+				<div>{/* <img src={require(`./logo.svg`).default} alt='react-icon' /> */}</div>
 				<Main />
 				<Footer />
 			</div>
