@@ -26,7 +26,7 @@ export const Error = () => {
 				<OrbitControls minDistance={3} maxDistance={7} dampingFactor={0.03} rotateSpeed={0.6} />
 				<Stars />
 				<ambientLight intensity={0.1} />
-				{/* <directionalLight  /> */}
+				{/* <directionalLight color='0xffffff' intensity={0.7} position={[5, 3, 5]} /> */}
 				<pointLight color='0xffffff' intensity={0.7} position={[5, 3, 5]} />
 				<Suspense fallback={null}>
 					<Box />
