@@ -5,6 +5,23 @@ body {
 	overflow-x: hidden;
 }
 
+.pageNotFound{
+	h1{
+		position: absolute;
+		top: 40px;
+		left: 50%;
+		color: white;
+		transform: translateX(-50%);
+	}
+	h3{
+		position: absolute;
+		top: 130px;
+		left: 50%;
+		color: white;
+		transform: translateX(-50%);
+	}
+}
+
 img {
 	max-width: 100%;
 }
