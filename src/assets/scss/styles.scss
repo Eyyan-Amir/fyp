@@ -10,15 +10,20 @@ body {
 		position: absolute;
 		top: 40px;
 		left: 50%;
-		color: white;
+		color: #fff;
+		text-shadow: 2px 2px 12px red;
 		transform: translateX(-50%);
 	}
 	h3{
 		position: absolute;
 		top: 130px;
 		left: 50%;
-		color: white;
+		color: #fff;
+		text-shadow: 2px 2px 12px #fff;
 		transform: translateX(-50%);
+		text-transform: capitalize;
+		padding-bottom: rem(16px);
+		// border-bottom: 2px solid #fff;
 	}
 }
 

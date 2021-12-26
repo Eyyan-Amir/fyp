@@ -8,7 +8,7 @@ function App() {
 	return (
 		<>
 			<div className='App'>
-				<Header />
+				{/* <Header /> */}
 				<div>{/* <img src={require(`./logo.svg`).default} alt='react-icon' /> */}</div>
 				<Main />
 				{/* <Footer /> */}
