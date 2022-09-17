@@ -19,7 +19,7 @@ const Animation = () => {
 
 const myStyle = { position: "relative", width: `100%`, height: `100vh`, background: "black", overflow: "hidden" };
 
-export const Error = () => {
+export const PageNotFound = () => {
 	useEffect(() => {
 		const gsap = window.gsap;
 		let tl = gsap.timeline();

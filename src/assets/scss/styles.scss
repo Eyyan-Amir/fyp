@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	background-color: var(--primary);
 }
 
 .pageNotFound{
@@ -27,8 +28,10 @@ body {
 	}
 }
 
-img {
-	max-width: 100%;
+.validation-error {
+	margin-top: 6px;
+  font-size: rem(14px);
+  color: var(--errorColor);
 }
 
 $sizeh4: 25px;
@@ -872,5 +875,17 @@ $heightBird2: 33px;
 			top: 12px;
 			left: 43%;
 		}
+	}
+}
+
+// sign Up
+.signUp {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 85vh;
+	&__left {
+		flex: 0 0 50%;
+		max-width: 50%;
 	}
 }
