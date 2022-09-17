@@ -1,44 +1,177 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
+import BaseSelectField from '../base/BaseSelectField';
+import { USER_TYPES } from '../../utlis/constants';
+import { ROUTES } from '../../routes';
+import {
+  Typography,
+  TextField,
+  Button,
+  Box,
+  FormControl,
+  Stack
+} from "@mui/material";
 
 export default function SignUp() {
 
-  const handleSubmit = (e) => {
-    e.preventDefault();  
-    console.log('Form Submited')
+  const [userId, setUerId] = useState("");
+  const [isError, setIsError] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+
+  const handleUserType = e => {
+    setUerId(e.target.value);
+    setIsError(false);
   }
+
+  const onSubmit = data => {
+    let userType = USER_TYPES.find(item => item.id === userId);
+    if (!userType) {
+      setIsError(true);
+      return;
+    }
+    debugger;
+  };
+
+  const onError = (error, item) => {
+    if ([undefined, null, ""].includes(item)) {
+      setIsError(true);
+    }
+  };
 
   return (
     <div className='signUp'>
-      <div className="row">
-        <div className="col-6">Left Side</div>
-        <div className="col-6">
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
-              <input type='text' id='firstName' placeholder='First Name'/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="firstName">Last Name</label>
-              <input type='text' id='lastName' placeholder='Last Name'/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="firstName">Email</label>
-              <input type='email' id='email' placeholder='Email'/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="firstName">Password</label>
-              <input type='password' id='firstName' placeholder='password'/>
-            </div>
-            <div className="form-group">
-            <select className="form-select">
-              <option value="0">Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <button type='submit'>Sign Up</button>
-            </div>
-          </form>
+      <div className="signUp__left">
+        <Box
+          sx={{
+            maxWidth: 600,
+            padding: 4,
+            borderRadius: 4,
+            boxShadow: 3,
+            bgcolor: "background.paper"
+          }}
+        >
+        <form onSubmit={handleSubmit(onSubmit, () => onError(null, userId))}>
+          <Typography
+            variant="h4"
+            component="h4"
+            sx={{fontWeight: 600}}
+            mb={4}
+          >
+            Sign Up
+          </Typography>
+          <Stack spacing={3}>
+            <FormControl>
+              <TextField
+                fullWidth
+                label="First name"
+                type="text"
+                placeholder="First name"
+                autoComplete="off"
+                error={!!errors.firstName}
+                {...register("firstName", {
+                  required: true
+                })}
+              />
+              {errors.firstName && (
+                <div className="validation-error">First Name required!</div>
+              )}
+            </FormControl>
+            <FormControl>
+              <TextField
+                fullWidth
+                label="Last name"
+                type="text"
+                placeholder="Last name"
+                autoComplete="off"
+                error={!!errors.lastName}
+                {...register("lastName", {
+                  required: true
+                })}
+              />
+              {errors.lastName && (
+                <div className="validation-error">Last Name required!</div>
+              )}
+            </FormControl>
+            <FormControl>
+              <TextField
+                fullWidth
+                label="Email"
+                type="email"
+                placeholder="Email"
+                autoComplete="off"
+                error={!!errors.email}
+                {...register("email", {
+                  required: true
+                })}
+              />
+              {errors.email && (
+                <div className="validation-error">Email required!</div>
+              )}
+            </FormControl>
+            <FormControl>
+              <TextField
+                fullWidth
+                label="Password"
+                type="password"
+                placeholder="Password"
+                autoComplete="off"
+                error={!!errors.password}
+                {...register("password", {
+                  required: true
+                })}
+              />
+              {errors.password && (
+                <div className="validation-error">Password required!</div>
+              )}
+            </FormControl>
+            <FormControl>
+              <BaseSelectField
+                label="User Type"
+                error={isError}
+                value={userId}
+                onChange={handleUserType}
+                options={USER_TYPES.map(({ id, name }) => ({
+                  value: id,
+                  label: name
+                }))}
+              />
+              {isError && (
+                <div className="validation-error">User Type required!</div>
+              )}
+            </FormControl>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Button type="submit" variant="contained" size="large">
+                submit
+              </Button>
+              <Link
+                  to={ROUTES.LOGIN}
+                  style={{ 
+                    textDecoration: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  <Typography variant="subtitle1" color="primary.main">
+                    Login
+                  </Typography>
+                </Link>
+            </Stack>
+          </Stack>
+        </form>
+        </Box>
+      </div>
+      <div className="signUp__right">
+        <div className="image">
+          <img className='img-fluid' src='../assets/signUp.svg' alt='signup' />
         </div>
       </div>
     </div>
