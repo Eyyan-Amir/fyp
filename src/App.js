@@ -1,4 +1,5 @@
 import React from "react";
+import "./assets/scss/styles.scss";
 import { ROUTES } from "./routes";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./components/registration/SignUp";
@@ -10,7 +11,6 @@ import Login from "./components/Login";
 import { theme } from "./styles/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import ForgotPassword from "./components/ForgotPassword.js";
-import "./assets/scss/styles.scss";
 import ConfirmPassword from "./components/ComfirmPassword";
 
 function App() {
