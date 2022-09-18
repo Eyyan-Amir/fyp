@@ -1,7 +1,6 @@
 header {
-    padding-top: rem(16px);
-    padding-bottom: rem(16px);
-    position: fixed;
+    padding: rem(16px) rem(32px);
+    // position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -13,29 +12,49 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .logo {
-            max-width: 120px;
-            background: rgb(255 255 255 / 70%);
-            padding: 5px;
-            &:hover {
-                opacity: .75;
-            }
-        }
-        ul {
+        .header__right {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            list-style: unset;
-            padding: 0;
-            li {
-                &:not(:last-child) {
-                    margin-right: rem(25px);
+            .logo {
+                // max-width: 120px;
+                background: rgb(255 255 255 / 70%);
+                padding: 5px;
+                margin-right: rem(90px);
+                &:hover {
+                    opacity: .75;
                 }
-                &::marker {
-                    content: none;
-                }
-                a {
-                    color: #ffffff;
+            }
+            &--link {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                list-style: unset;
+                padding: 0;
+                li {
+                    &:not(:last-child) {
+                        margin-right: 5rem;
+                    }
+                    &::marker {
+                        content: none;
+                    }
+                    .dropdown {
+                        button {
+                            background-color: transparent !important;
+                            color: #000 !important;
+                            border: none;
+                            font-weight: 400;
+							padding: 0;
+                        }
+						.dropdown-menu {
+							li {
+								margin: unset;
+								a {
+									padding: 12px;
+								}
+							}
+							// border: none;
+						}
+                    } 
                 }
             }
         }
@@ -43,7 +62,7 @@ header {
 }
 
 .header {
-    padding: 48px 78px;
-    font-size: 36px;
+    padding: rem(48px) rem(78px);
+    font-size: rem(36px);
     font-weight: 600;
 }

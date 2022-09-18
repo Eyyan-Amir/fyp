@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../authenticated/Header';
 
 function Authenticated({ children }) {
   return (
-    <div>{children}</div>
+    <>
+      <Header />
+      <div className='contentWrapper'>{children}</div>
+    </>
   )
 }
 

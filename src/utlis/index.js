@@ -1,57 +1,50 @@
 export const textFieldStyle = () => {
   return {
-    color: "green",
+    color: "rgba(1, 8, 16, 0.87)",
     "& textarea": {
-      color: "green"
+      color: "rgba(1, 8, 16, 0.87)"
     },
     "& label": {
-      color: "green"
+      color: "rgba(1, 8, 16, 0.87)"
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "green"
+        borderColor: "rgba(0, 0, 0, 0.23)"
       },
       "&:hover fieldset": {
-        borderColor: "orange"
+        borderColor:  "#3C67FF",
       }
     },
     "& input": {
-      color: "green",
-      "&:-webkit-autofill": {
-        "-webkit-box-shadow": ({ isResponsive }) =>
-          isResponsive
-            ? `0 0 0 100px green inset`
-            : `0 0 0 100px green inset`,
-        "-webkit-text-fill-color": "green"
-      },
-      "&[type=number]": {
-        "-moz-appearance": "textfield"
-      },
-      "&::-webkit-outer-spin-button": {
-        "-webkit-appearance": "none",
-        margin: 0
-      },
-      "&::-webkit-inner-spin-button": {
-        "-webkit-appearance": "none",
-        margin: 0
-      }
+      color: "rgba(1, 8, 16, 0.87)",
     },
     "& .MuiOutlinedInput-root .MuiInputBase-root": {
-      color: "green"
+      color: "rgba(1, 8, 16, 0.87)"
     },
     "& .MuiTypography-root": {
-      color: "green"
+      color: "rgba(1, 8, 16, 0.87)"
     },
     "& .MuiSvgIcon-root": {
-      color: "blue"
+      color: "rgba(7, 13, 19, 0.7)"
     },
     "& .MuiInput-root.MuiInput-underline": {
       "&::before": {
-        borderBottom: `1px solid ${"green"}`
+        borderBottom: `1px solid rgba(1, 8, 16, 0.87)`
       }
     },
     "& .MuiSelect-select.MuiSelect-outlined": {
-      color: "green"
+      color: "rgba(1, 8, 16, 0.87)"
     },
-  };
+    "& .Mui-disabled.MuiInputBase-formControl": {
+      border: `1px dashed rgba(2, 19, 39, 0.08)`,
+      "& .Mui-disabled.MuiOutlinedInput-input": {
+      },
+      "& svg": {
+        color: "rgba(1, 8, 16, 0.87)"
+      }
+    },
+    "& label.Mui-disabled": {
+      color: "rgba(7, 13, 19, 0.6)"
+    }
+  }
 }

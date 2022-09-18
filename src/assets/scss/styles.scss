@@ -1,10 +1,4 @@
 @import 'import';
-body {
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-	background-color: var(--primary);
-}
 
 .pageNotFound{
 	h1{
@@ -888,4 +882,8 @@ $heightBird2: 33px;
 		flex: 0 0 50%;
 		max-width: 50%;
 	}
+}
+
+.contentWrapper {
+	padding-top: rem(120px);
 }

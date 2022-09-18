@@ -1,4 +1,5 @@
 import React from "react";
+import bootstrap from 'bootstrap'
 import "./assets/scss/styles.scss";
 import { ROUTES } from "./routes";
 import { Switch, Route } from "react-router-dom";
@@ -6,12 +7,13 @@ import SignUp from "./components/registration/SignUp";
 import NonAuthenticated from "./components/layout/NonAuthenticated";
 import Authenticated from "./components/layout/Authenticated";
 import {PageNotFound} from "./components/PageNotFound";
-import Home from "./components/Home";
 import Login from "./components/Login";
 import { theme } from "./styles/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import ForgotPassword from "./components/ForgotPassword.js";
 import ConfirmPassword from "./components/ComfirmPassword";
+import Home from "./components/authenticated/Home";
+import Dashboard from "./components/authenticated/Dashboard";
 
 function App() {
 	const APP_ROUTES = {
@@ -22,6 +24,7 @@ function App() {
       { path: ROUTES.CONFIRM_PASSWORD, component: ConfirmPassword },
     ],
 		AUTHENTICATED: [
+      { path: ROUTES.DASHBOARD, component: Dashboard },
       { path: ROUTES.HOME, component: Home },
     ],
   };
