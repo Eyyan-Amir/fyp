@@ -1,46 +1,47 @@
 export const textFieldStyle = () => {
   return {
-    color: "rgba(1, 8, 16, 0.87)",
+    color: "#00204a",
+    "&:hover": {
+      borderColor:  "#3C67FF",
+    },
     "& textarea": {
-      color: "rgba(1, 8, 16, 0.87)"
+      color: "#00204a"
     },
     "& label": {
-      color: "rgba(1, 8, 16, 0.87)"
+      color: "#00204a !important"
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "rgba(0, 0, 0, 0.23)"
+        borderColor: "#00204a !important"
       },
       "&:hover fieldset": {
         borderColor:  "#3C67FF",
       }
     },
     "& input": {
-      color: "rgba(1, 8, 16, 0.87)",
+      color: "#00204a",
     },
     "& .MuiOutlinedInput-root .MuiInputBase-root": {
-      color: "rgba(1, 8, 16, 0.87)"
+      color: "#00204a"
     },
     "& .MuiTypography-root": {
-      color: "rgba(1, 8, 16, 0.87)"
+      color: "#00204a"
     },
     "& .MuiSvgIcon-root": {
       color: "rgba(7, 13, 19, 0.7)"
     },
     "& .MuiInput-root.MuiInput-underline": {
       "&::before": {
-        borderBottom: `1px solid rgba(1, 8, 16, 0.87)`
+        borderBottom: `1px solid #00204a`
       }
     },
     "& .MuiSelect-select.MuiSelect-outlined": {
-      color: "rgba(1, 8, 16, 0.87)"
+      color: "#00204a"
     },
     "& .Mui-disabled.MuiInputBase-formControl": {
       border: `1px dashed rgba(2, 19, 39, 0.08)`,
-      "& .Mui-disabled.MuiOutlinedInput-input": {
-      },
       "& svg": {
-        color: "rgba(1, 8, 16, 0.87)"
+        color: "#00204a"
       }
     },
     "& label.Mui-disabled": {

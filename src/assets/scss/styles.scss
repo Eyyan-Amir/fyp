@@ -37,7 +37,7 @@ $widthBird2: 60px;
 $widthBird1: 30px;
 $heightBird2: 33px;
 
-.wrapper {
+.bird-wrapper {
 	background: linear-gradient(to bottom, $color4Blue, white);
 	max-width: 100%;
 	overflow: hidden;
@@ -884,6 +884,67 @@ $heightBird2: 33px;
 	}
 }
 
-.contentWrapper {
-	padding-top: rem(120px);
+// banner
+.banner {
+	position: relative;
+	&__image {
+		height: 70vh;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	.wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 10%);
+		h2 {
+			margin: 24px 0;
+			span {
+				color: var(--errorColor);
+			}
+		}
+		.search-bar {
+			display: flex;
+			.search-field {
+				flex: 1;
+				input{
+					height: 40px;
+					width: 100%;
+					background-color: hsl(0, 0%, 100%);
+					border: 1px solid #ccc;
+					border-right: none;
+					border-radius: 2px 0 0 2px;
+					box-shadow: inset 0 1px 2px #eee;
+					color: hsl(0, 0%, 6.7%);
+					padding: 2px 15px;
+					&:focus {
+						outline: none;
+						border: 1px solid rgb(15, 82, 182);
+					}
+				}
+			}
+			.search-icon {
+				flex: 0 0 65px;
+				max-width: 65px;
+				height: 40px;
+				background-color: #f8f8f8;
+				border: 1px solid #ccc;
+				border-radius: 0 2px 2px 0;
+				span {
+					color: rgb(90, 88, 88);
+					svg {
+						width: 28px;
+						opacity: 0.8;
+					}
+					&:hover {
+						color: #000;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
 }

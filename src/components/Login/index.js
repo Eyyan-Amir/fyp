@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-import { Link  } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {
   Typography,
   TextField,
@@ -13,7 +13,7 @@ import { ROUTES } from '../../routes';
 
 export default function Login() {
 
-
+  const history = useHistory();
   const {
     register,
     handleSubmit,
@@ -21,7 +21,7 @@ export default function Login() {
   } = useForm();
 
   const onSubmit = data => {
-    debugger;
+    history.push(ROUTES.HOME)
   };
 
   return (
