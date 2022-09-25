@@ -56,64 +56,50 @@ export const theme = createTheme({
     },
   },
   typography: {
+    fontFamily: [
+      "Rubik",
+      'sans-serif',
+    ].join(','),
     h1: {
-      fontFamily: "'Montserrat', sans-serif",
-      fontWeight: 700,
       fontSize: "76px"
     },
     h2: {
-      fontFamily: "'Montserrat', sans-serif",
-      fontWeight: 700,
       fontSize: "60px"
     },
     h3: {
-      fontFamily: "'Montserrat', sans-serif",
-      fontWeight: 700,
       fontSize: "48px"
     },
     h4: {
-      fontFamily: "'Montserrat', sans-serif",
-      fontWeight: 700,
       fontSize: "34px"
     },
     h5: {
-      fontFamily: "'Montserrat', sans-serif",
-      fontWeight: 700,
       fontSize: "24px"
     },
     h6: {
-      fontFamily: "'Montserrat', sans-serif",
-      fontWeight: 700,
       fontSize: "20px"
     },
     subtitle1: {
-      fontFamily: "'Montserrat', sans-serif",
       fontWeight: 400,
       fontSize: "16px"
     },
     subtitle2: {
-      fontFamily: "'Montserrat', sans-serif",
       fontWeight: 400,
       fontSize: "14px"
     },
     body1: {
-      fontFamily: "'Nunito Sans', sans-serif",
       fontWeight: 400,
       fontSize: "16px"
     },
     body2: {
-      fontFamily: "'Nunito Sans', sans-serif",
       fontWeight: 400,
       fontSize: "14px"
     },
     button: {
-      fontFamily: "'Nunito Sans', sans-serif",
       fontWeight: 600,
       fontSize: "15px",
       textTransform: "uppercase"
     },
     caption: {
-      fontFamily: "'Nunito Sans', sans-serif",
       fontWeight: 400,
       fontSize: "12px"
     },

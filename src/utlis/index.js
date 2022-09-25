@@ -1,57 +1,51 @@
 export const textFieldStyle = () => {
   return {
-    color: "green",
+    color: "#00204a",
+    "&:hover": {
+      borderColor:  "#3C67FF",
+    },
     "& textarea": {
-      color: "green"
+      color: "#00204a"
     },
     "& label": {
-      color: "green"
+      color: "#00204a !important"
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "green"
+        borderColor: "#00204a !important"
       },
       "&:hover fieldset": {
-        borderColor: "orange"
+        borderColor:  "#3C67FF",
       }
     },
     "& input": {
-      color: "green",
-      "&:-webkit-autofill": {
-        "-webkit-box-shadow": ({ isResponsive }) =>
-          isResponsive
-            ? `0 0 0 100px green inset`
-            : `0 0 0 100px green inset`,
-        "-webkit-text-fill-color": "green"
-      },
-      "&[type=number]": {
-        "-moz-appearance": "textfield"
-      },
-      "&::-webkit-outer-spin-button": {
-        "-webkit-appearance": "none",
-        margin: 0
-      },
-      "&::-webkit-inner-spin-button": {
-        "-webkit-appearance": "none",
-        margin: 0
-      }
+      color: "#00204a",
     },
     "& .MuiOutlinedInput-root .MuiInputBase-root": {
-      color: "green"
+      color: "#00204a"
     },
     "& .MuiTypography-root": {
-      color: "green"
+      color: "#00204a"
     },
     "& .MuiSvgIcon-root": {
-      color: "blue"
+      color: "rgba(7, 13, 19, 0.7)"
     },
     "& .MuiInput-root.MuiInput-underline": {
       "&::before": {
-        borderBottom: `1px solid ${"green"}`
+        borderBottom: `1px solid #00204a`
       }
     },
     "& .MuiSelect-select.MuiSelect-outlined": {
-      color: "green"
+      color: "#00204a"
     },
-  };
+    "& .Mui-disabled.MuiInputBase-formControl": {
+      border: `1px dashed rgba(2, 19, 39, 0.08)`,
+      "& svg": {
+        color: "#00204a"
+      }
+    },
+    "& label.Mui-disabled": {
+      color: "rgba(7, 13, 19, 0.6)"
+    }
+  }
 }

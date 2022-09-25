@@ -53,7 +53,7 @@ const Uikit = () => {
 			<FontAwesomeIcon icon={["fab", "apple"]} size='lg' />
 			<TextField error id='outlined-basic' label='Outlined' variant='outlined' />
 			<Switch {...label} defaultChecked color='secondary' />
-			<div className='wrapper'>
+			<div className='bird-wrapper'>
 				<button className='button-bird'>
 					<p className='button-bird__text'>SEND</p>
 					<svg className='feather' x='0px' y='0px' viewBox='0 0 75 38'>

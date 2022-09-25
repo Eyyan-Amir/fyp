@@ -20,7 +20,7 @@ export default function ForgotPassword() {
   } = useForm();
 
   const onSubmit = data => {
-    debugger;
+    // debugger;
   };
 
   return (

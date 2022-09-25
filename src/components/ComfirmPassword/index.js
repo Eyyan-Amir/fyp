@@ -20,8 +20,8 @@ export default function ConfirmPassword() {
   } = useForm();
 
   const onSubmit = data => {
-    history.push(ROUTES.HOME)
-    debugger;
+    history.push(ROUTES.DASHBOARD)
+    // debugger;
   };
 
   return (

@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Header() {
     return (
-        <div className='header'>JOBEASE</div>
+        <div className='nonAuthenticated-header'>JOBEASE</div>
     )
 }

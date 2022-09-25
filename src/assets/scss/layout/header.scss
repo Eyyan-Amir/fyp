@@ -1,7 +1,5 @@
 header {
-    padding-top: rem(16px);
-    padding-bottom: rem(16px);
-    position: fixed;
+    padding: rem(16px) rem(32px);
     left: 0;
     top: 0;
     width: 100%;
@@ -13,37 +11,126 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .logo {
-            max-width: 120px;
-            background: rgb(255 255 255 / 70%);
-            padding: 5px;
-            &:hover {
-                opacity: .75;
-            }
-        }
-        ul {
+        .header__right {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            list-style: unset;
-            padding: 0;
-            li {
-                &:not(:last-child) {
-                    margin-right: rem(25px);
+            .logo {
+                // max-width: 120px;
+                background: rgb(255 255 255 / 70%);
+                padding: 5px;
+                margin-right: rem(90px);
+                &:hover {
+                    opacity: .75;
                 }
-                &::marker {
-                    content: none;
-                }
-                a {
-                    color: #ffffff;
+            }
+            &--link {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                list-style: unset;
+                padding: 0;
+                li {
+                    &:not(:last-child) {
+                        margin-right: 5rem;
+                    }
+                    &::marker {
+                        content: none;
+                    }
+                    .dropdown {
+                        button {
+                            background-color: transparent !important;
+                            color: #000 !important;
+                            border: none;
+                            font-weight: 400;
+							padding: 0;
+                        }
+						.dropdown-menu {
+							li {
+								margin: unset;
+								a {
+									padding: 12px;
+								}
+							}
+						}
+                    } 
                 }
             }
         }
     }
 }
 
-.header {
-    padding: 48px 78px;
-    font-size: 36px;
+// Non-Authenticated Header
+
+.nonAuthenticated-header {
+    padding: rem(48px) rem(78px);
+    font-size: rem(36px);
     font-weight: 600;
+}
+
+// Authenticatred Header
+
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,.2);
+    &__left {
+        display: flex;
+        align-items: center;
+        &--link {
+            display: flex;
+            align-items: center;
+            margin-left: rem(66px);
+            li {
+                &:not(:last-child) {
+                    margin-right: 5rem;
+                }
+                &::marker {
+                    content: none;
+                }
+                .dropdown {
+                    button {
+                        background-color: transparent !important;
+                        color: var(--textPrimary) !important;
+                        border: none;
+                        font-weight: 400;
+                        padding: 0;
+                    }
+                    .dropdown-menu {
+                        li {
+                            margin: unset;
+                            a {
+                                padding: 12px;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    opacity: .7;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+        &--link {
+            margin-left: 24px;
+            padding: rem(18px) rem(24px);
+            background-color: var(--textPrimary);
+            color: var(--default);
+            border-radius: 4px;
+            text-decoration: none !important;
+            transition: .3s all;
+            border: 1px solid var(--textPrimary);
+            text-transform: uppercase;
+            &:hover {
+                opacity: .7;
+            }
+
+        }
+    }
 }
