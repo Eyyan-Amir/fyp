@@ -6,16 +6,19 @@ import { ROUTES } from '../../routes';
 
 
 function Header() {
+
+  let users = JSON.parse(localStorage.getItem("users") || "{}");
+  let authUser = JSON.parse(localStorage.getItem("validUser") || "{}");
+
+  let validUser = users.find(u => u.email === authUser.email)
+
   return (
     <header className='header'>
       <div className="header__left">
-        {/* <div className="logo">
-          <img src="" alt="jobEase-logo" className="img-fluid" />
-        </div> */}
         <h2>JobEase</h2>
         <ul className='header__left--link'>
-            <li>Dashboard</li>
-            <li>
+            <li>Home</li>
+            {/* <li>
               <div className="dropdown">
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
                   Jobs
@@ -25,14 +28,14 @@ function Header() {
                   <li><a className="dropdown-item" href="#">Job Prefrenced</a></li>
                 </ul>
               </div>
-            </li>
+            </li> */}
             <li>CV Manager</li>
           </ul>
       </div>
       <div className="header__right">
         <Box sx={{ minWidth: 150}}>
           <FormControl fullWidth sx={() => textFieldStyle()}>
-            <InputLabel shrink={false} >Ayyan</InputLabel>
+            <InputLabel shrink={false} >{validUser.firstName}</InputLabel>
             <Select label="Name" labelId="demo-simple-select-label">
               <Link to="" style={{ textDecoration: "none" }}>
                 <MenuItem sx={theme => ({ color: theme.palette.text.primary })}>

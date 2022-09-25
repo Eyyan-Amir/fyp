@@ -21,7 +21,16 @@ export default function Login() {
   } = useForm();
 
   const onSubmit = data => {
-    history.push(ROUTES.HOME)
+
+    let users = JSON.parse(localStorage.getItem("users") || "{}");
+		let user = users.find(u => u.email === data.email);
+
+    if (user.password === data.password) {
+      localStorage.setItem("validUser", JSON.stringify(user));
+      history.push(ROUTES.HOME);
+		} else {
+			alert("In-valid credential");
+		}
   };
 
   return (

@@ -948,3 +948,34 @@ $heightBird2: 33px;
 		}
 	}
 }
+
+// home
+
+.home {
+	.card {
+		margin: rem(32px) 0;
+		padding: rem(32px);
+		border-radius: 8px;
+		.title {
+			font-size: 24px;
+			font-weight: 600;
+			text-transform: capitalize;
+			margin-bottom: 16px;
+		}
+		.rating {
+			margin-bottom: 16px;
+		}
+		div {
+			font-size: 18px;
+		}
+		.benefits {
+			font-size: 18px;
+			font-weight: 500;
+			margin: 8px 8px 8px 0;
+			display: inline-block;
+		}
+		ul {
+			list-style: inside;
+		}
+	}
+}

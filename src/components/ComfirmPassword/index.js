@@ -21,7 +21,7 @@ export default function ConfirmPassword() {
 
   const onSubmit = data => {
     history.push(ROUTES.DASHBOARD)
-    debugger;
+    // debugger;
   };
 
   return (

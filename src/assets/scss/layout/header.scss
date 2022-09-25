@@ -128,8 +128,7 @@ header {
             border: 1px solid var(--textPrimary);
             text-transform: uppercase;
             &:hover {
-                background-color: var(--default);
-                color: var(--textPrimary);
+                opacity: .7;
             }
 
         }

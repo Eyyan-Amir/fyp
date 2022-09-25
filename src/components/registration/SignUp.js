@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import BaseSelectField from '../base/BaseSelectField';
 import { USER_TYPES } from '../../utlis/constants';
 import { ROUTES } from '../../routes';
@@ -17,6 +17,8 @@ export default function SignUp() {
 
   const [userId, setUerId] = useState("");
   const [isError, setIsError] = useState(false);
+  const [userRegister, setUserRegister] = useState([]);
+  const history = useHistory();
 
   const {
     register,
@@ -34,8 +36,12 @@ export default function SignUp() {
     if (!userType) {
       setIsError(true);
       return;
-    }
-    debugger;
+    };
+    let userTypeData = {...data, userType}
+    setUserRegister([...userRegister, userTypeData])
+
+    history.push(ROUTES.LOGIN)
+
   };
 
   const onError = (error, item) => {
@@ -43,6 +49,10 @@ export default function SignUp() {
       setIsError(true);
     }
   };
+
+  useEffect(() => {
+		localStorage.setItem("users", JSON.stringify(userRegister));
+	}, [userRegister]);
 
   return (
     <div className='signUp'>
