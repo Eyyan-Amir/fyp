@@ -9,7 +9,7 @@ function Banner() {
 
   const handleFilter = () => {
     debugger;
-    let result = jobs.filter(job => job.title === search);
+    let result = jobs.filter(job => job.title.toLowerCase().includes(search.toLowerCase()));
 
     dispatch(updateJobs(result));
   }
