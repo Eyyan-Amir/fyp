@@ -12,18 +12,21 @@ export const jobEase = createSlice({
   initialState,
   reducers: {
     handleSearch: (state, action) => {
-      state.search= action.payload
+      state.search= action.payload;
     },
     updateJobs: (state, action) => {
-      state.jobs = action.payload
+      state.jobs = action.payload;
     },
-    // resetJobs: (state, action) => 
+    resetJobs: (state, action) => {
+      state.search = "";
+    }
   }
 });
 
 export const { 
   handleSearch,
   updateJobs,
+  resetJobs,
 } = jobEase.actions;
 
 export default jobEase.reducer;

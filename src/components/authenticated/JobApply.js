@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useParams } from 'react-router';
 
 function JobApply() {
+  const { id } = useParams(); 
   return (
-    <div>JobApply</div>
+    <div>JobApply {id}</div>
   )
 }
 
-export default JobApply
+export default JobApply;

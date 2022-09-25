@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Banner from './Banner';
 import { Button, Rating } from "@mui/material";
 import { useSelector } from "react-redux"; 
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 
@@ -22,9 +23,9 @@ export default function Home() {
             <div><span className='benefits'>Role: </span>{job.role}</div>
             <span className='benefits mb-1'>Description</span>
             <div dangerouslySetInnerHTML={{ __html: job.desc }}></div>
-            <div className='mt-4'>
+            <Link to={`/job-apply/${job.id}`} style={{textDecoration: "none", marginTop: "32px"}}>
               <Button variant='contained' size='large'>Apply</Button>
-            </div>
+            </Link>
           </div>
         ))}
       </div>
