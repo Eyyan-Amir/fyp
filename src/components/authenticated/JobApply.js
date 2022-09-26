@@ -3,6 +3,7 @@ import { useParams, useHistory } from 'react-router';
 import { useSelector } from "react-redux";
 import { Button, Stack } from '@mui/material';
 import { ROUTES } from "../../routes/index"
+import swal from 'sweetalert';
 
 function JobApply() {
   const { id } = useParams();
@@ -11,7 +12,7 @@ function JobApply() {
   const [selectJob, setSelectJob] = useState({});
 
   const handleAlert = () => {
-    alert("you successfully applied on this job")
+    swal("Good job!", "you successfully applied on this job", "success");
   }
 
   useEffect(() => {
