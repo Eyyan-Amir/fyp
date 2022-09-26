@@ -17,7 +17,9 @@ function Header() {
       <div className="header__left">
         <h2>JobEase</h2>
         <ul className='header__left--link'>
-            <li>Home</li>
+            <li>
+              <Link to={ROUTES.HOME}>Home</Link>
+            </li>
             {/* <li>
               <div className="dropdown">
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
@@ -35,7 +37,7 @@ function Header() {
       <div className="header__right">
         <Box sx={{ minWidth: 150}}>
           <FormControl fullWidth sx={() => textFieldStyle()}>
-            <InputLabel shrink={false} >{validUser.firstName}</InputLabel>
+            <InputLabel shrink={false} >{validUser?.firstName}</InputLabel>
             <Select label="Name" labelId="demo-simple-select-label">
               <Link to="" style={{ textDecoration: "none" }}>
                 <MenuItem sx={theme => ({ color: theme.palette.text.primary })}>

@@ -20,6 +20,7 @@ export default function Home() {
               <Rating name="read-only" value={job.rating} readOnly />
             </div>
             <div><span className='benefits'>Salary: </span>{`${job.salary} Per Month`}</div>
+            <div><span className='benefits'>Location: </span>Lahore, Pakistan</div>
             <div><span className='benefits'>Role: </span>{job.role}</div>
             <span className='benefits mb-1'>Description</span>
             <div dangerouslySetInnerHTML={{ __html: job.desc }}></div>

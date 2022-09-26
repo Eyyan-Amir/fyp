@@ -84,6 +84,12 @@ header {
             align-items: center;
             margin-left: rem(66px);
             li {
+                font-size: 18px;
+                font-weight: 500;
+                a {
+                    color: var(--textPrimary);
+                    text-decoration: none !important;
+                }
                 &:not(:last-child) {
                     margin-right: 5rem;
                 }

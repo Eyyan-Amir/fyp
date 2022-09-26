@@ -980,3 +980,49 @@ $heightBird2: 33px;
 		}
 	}
 }
+
+.jobApply {
+	padding: rem(120px);
+	.card {
+		padding: 24px;
+		max-width: 1000px;
+		margin: auto;
+		.title {
+			font-size: 32px;
+			text-transform: capitalize;
+			font-weight: 500;
+		}
+		.location {
+			margin: 18px 0;
+			font-weight: 300;
+		}
+		.posted-date {
+			margin: 12px 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&-left {
+				display: flex;
+				div:not(:last-child) {
+					margin-right: 32px;
+				}
+			}
+		}
+		.sub-title {
+			font-size: 16px;
+			font-weight: 500;
+			margin: 16px 0;
+		}
+		.desc {
+			p {
+				line-height: 1.6;
+			}
+			ul {
+				list-style: inside;
+				li {
+					line-height: 1.6;
+				}
+			}
+		}
+	}
+}
